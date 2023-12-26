@@ -4,12 +4,17 @@
     <title>Test Widget</title>
   </head>
   <body>
-    <h1 class="is_us">1</h1>
+    <h1 class="is_us">0</h1>
+    <div
+      style="min-width: 400px; min-height: 300px;padding: 0px"
+      id="my-chat-widget"
+    ></div>
     <script type="text/javascript">
       (function(o,l) {
           window.oliviaChatData = window.oliviaChatData || [];
           window.oliviaChatBaseUrl = o;
           window.oliviaChatData.push(['setKey', l]);
+          window.oliviaChatData.push(['setParent', 'my-chat-widget']);
           window.oliviaChatData.push(['start']);
           var apply = document.createElement('script');
           apply.type = 'text/javascript';
@@ -17,7 +22,7 @@
           apply.src = 'https://127.0.0.1:8080/static/site/js/widget-client.js';
           var s = document.getElementsByTagName('script')[0];
           s.parentNode.insertBefore(apply, s);
-      })('http://127.0.0.1:8080', 'xbarabdlueqfqedmbvpx');
+      })('http://127.0.0.1:8080', 'orlpcswwomdpfssjjnqa');
     </script>
   </body>
 </html>
